@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica1.MainPage">
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="BoxView" HorizontalOptions="Center" TextColor="red"/>
+            <BoxView Color="Accent"
+             WidthRequest="150"
+             HeightRequest="150"
+            HorizontalOptions="Center"/>
+            <Label Text="Image" HorizontalOptions="Center" TextColor="red"/>
+            <Image Source="https://aka.ms/campus.jpg"
+            Aspect="AspectFit"
+            HorizontalOptions="Center" />
+            <Label Text="Etiqueta" HorizontalOptions="Center" TextColor="red"/>
+            <Label Text="Hello, Xamarin.Forms!"
+            FontSize="Large"
+            FontAttributes="Bold"
+            HorizontalTextAlignment="Center" />
+            <Label Text="Ruta de acceso" HorizontalOptions="Center" TextColor="red"/>
+            <Path Stroke="Black"
+            Aspect="Uniform"
+            HorizontalOptions="Center"
+            HeightRequest="100"
+            WidthRequest="100"
+            Data="M13.9,16.2
+            L32,16.2 32,31.9 13.9,30.1Z
+            M0,16.2
+            L11.9,16.2 11.9,29.9 0,28.6Z
+            M11.9,2
+            L11.9,14.2 0,14.2 0,3.3Z
+            M32,0
+            L32,14.2 13.9,14.2 13.9,1.8Z" />
+            <Label Text="Poligono" HorizontalOptions="Center" TextColor="red"/>
+            <Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96,
+                 50 96, 48 192, 150 200 144 48"
+             Fill="Blue"
+             Stroke="Red"
+            StrokeThickness="3"
+            HorizontalOptions="Center" />
+            <Label Text="Web view"  HorizontalOptions="Center" TextColor="red"/>
+            <WebView HeightRequest="300" WidthRequest="100" Source="https://www.youtube.com/@vegetta777"
+            VerticalOptions="FillAndExpand" />
+
+            <Label Text="Vistas que inician comandos" HorizontalTextAlignment="Center" TextColor="red" FontSize="30"/>
+
+            <Label Text="Boton" HorizontalOptions="Center" TextColor="red"/>
+            <Button Text="Haz click"
+                    Font="Large"
+                    BorderWidth="1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+            <Label Text="Imagen boton" HorizontalOptions="Center" TextColor="red"/>
+            <ImageButton Source="Vegetta777.png"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+            <Label Text="radio boton" HorizontalOptions="Center" TextColor="red"/>
+            <RadioButton Content="Piña"/>
+            <Label Text="RefreshView" HorizontalOptions="Center" TextColor="red"/>
+            <RefreshView IsRefreshing="{Binding IsRefreshing}"
+                    Command="{Binding RefreshCommand}" >
+            </RefreshView>
+            <Label Text="Barra de busqueda" HorizontalOptions="Center" TextColor="red"/>
+            <SearchBar Placeholder="Enter search term"/>
+            <Label Text="Swipe View" HorizontalOptions="Center" TextColor="red"/>
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem Text="Delete"
+                       IconImageSource="deleteicon.jpg"
+                       BackgroundColor="LightPink"
+                        />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+            </SwipeView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
